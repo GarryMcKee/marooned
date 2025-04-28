@@ -1,9 +1,10 @@
-import Link from "next/link";
+import WarmupNotation from "~/components/WarmupComponent";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+    <main className="flex min-h-screen flex-col items-center justify-center text-black bg-white">
       <p>Hello Marooned!</p>
+      <WarmupNotation/>
     </main>
   );
 }

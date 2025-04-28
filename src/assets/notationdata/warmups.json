@@ -1,0 +1,200 @@
+{
+  "warmups": [
+    [
+      {
+        "guitarString": 6,
+        "fret": 1
+      },
+      {
+        "guitarString": 6,
+        "fret": 2
+      },
+      {
+        "guitarString": 6,
+        "fret": 3
+      },
+      {
+        "guitarString": 6,
+        "fret": 4
+      },
+      {
+        "guitarString": 5,
+        "fret": 1
+      },
+      {
+        "guitarString": 5,
+        "fret": 2
+      },
+      {
+        "guitarString": 5,
+        "fret": 3
+      },
+      {
+        "guitarString": 5,
+        "fret": 4
+      },
+      {
+        "guitarString": 4,
+        "fret": 1
+      },
+      {
+        "guitarString": 4,
+        "fret": 2
+      },
+      {
+        "guitarString": 4,
+        "fret": 3
+      },
+      {
+        "guitarString": 4,
+        "fret": 4
+      },
+      {
+        "guitarString": 3,
+        "fret": 1
+      },
+      {
+        "guitarString": 3,
+        "fret": 2
+      },
+      {
+        "guitarString": 3,
+        "fret": 3
+      },
+      {
+        "guitarString": 3,
+        "fret": 4
+      },
+      {
+        "guitarString": 2,
+        "fret": 1
+      },
+      {
+        "guitarString": 2,
+        "fret": 2
+      },
+      {
+        "guitarString": 2,
+        "fret": 3
+      },
+      {
+        "guitarString": 2,
+        "fret": 4
+      },
+      {
+        "guitarString": 1,
+        "fret": 1
+      },
+      {
+        "guitarString": 1,
+        "fret": 2
+      },
+      {
+        "guitarString": 1,
+        "fret": 3
+      },
+      {
+        "guitarString": 1,
+        "fret": 4
+      }
+    ],
+    [
+      {
+        "guitarString": 6,
+        "fret": 4
+      },
+      {
+        "guitarString": 6,
+        "fret": 3
+      },
+      {
+        "guitarString": 6,
+        "fret": 2
+      },
+      {
+        "guitarString": 6,
+        "fret": 1
+      },
+      {
+        "guitarString": 5,
+        "fret": 1
+      },
+      {
+        "guitarString": 5,
+        "fret": 2
+      },
+      {
+        "guitarString": 5,
+        "fret": 3
+      },
+      {
+        "guitarString": 5,
+        "fret": 4
+      },
+      {
+        "guitarString": 4,
+        "fret": 4
+      },
+      {
+        "guitarString": 4,
+        "fret": 3
+      },
+      {
+        "guitarString": 4,
+        "fret": 2
+      },
+      {
+        "guitarString": 4,
+        "fret": 1
+      },
+      {
+        "guitarString": 3,
+        "fret": 1
+      },
+      {
+        "guitarString": 3,
+        "fret": 2
+      },
+      {
+        "guitarString": 3,
+        "fret": 3
+      },
+      {
+        "guitarString": 3,
+        "fret": 4
+      },
+      {
+        "guitarString": 2,
+        "fret": 4
+      },
+      {
+        "guitarString": 2,
+        "fret": 3
+      },
+      {
+        "guitarString": 2,
+        "fret": 2
+      },
+      {
+        "guitarString": 2,
+        "fret": 1
+      },
+      {
+        "guitarString": 1,
+        "fret": 1
+      },
+      {
+        "guitarString": 1,
+        "fret": 2
+      },
+      {
+        "guitarString": 1,
+        "fret": 3
+      },
+      {
+        "guitarString": 1,
+        "fret": 4
+      }
+    ]
+  ]
+}
