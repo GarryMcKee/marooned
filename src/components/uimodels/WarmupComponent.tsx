@@ -2,16 +2,8 @@
 
 import { useEffect } from "react";
 import { Vex } from "vexflow";
-import warmupsData from "src/assets/notationdata/warmups.json"; // Assuming this is the correct path
-
-type GuitarNote = {
-  guitarString: number;
-  fret: number;
-};
-
-type GuitarNoteSequence = {
-  warmups: GuitarNote[][];
-};
+import warmupsData from "~/assets/notationdata/warmups.json";
+import type { GuitarNote, GuitarNoteSequence } from "~/components/uimodels/GuitarNote"; // Assuming this is the correct path
 
 const typedWarmupsData = warmupsData as GuitarNoteSequence;
 
