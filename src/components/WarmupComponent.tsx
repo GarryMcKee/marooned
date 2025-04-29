@@ -3,7 +3,10 @@
 import { useEffect } from "react";
 import { Vex } from "vexflow";
 import warmupsData from "~/assets/notationdata/warmups.json";
-import type { GuitarNote, GuitarNoteSequence } from "~/components/uimodels/GuitarNote"; // Assuming this is the correct path
+import type {
+  GuitarNote,
+  GuitarNoteSequence,
+} from "~/components/uimodels/GuitarNote"; // Assuming this is the correct path
 
 const typedWarmupsData = warmupsData as GuitarNoteSequence;
 
@@ -43,5 +46,10 @@ export default function WarmupNotation() {
     Formatter.FormatAndDraw(context, stave, notes);
   }, []); // Empty dependency array → runs only once on mount
 
-  return <div id="warmupOutput" className="notation" />;
+  return (
+    <div>
+      <h2>Todays Warmup</h2>
+      <div id="warmupOutput" className="notation" />
+    </div>
+  );
 }
