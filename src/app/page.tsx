@@ -1,4 +1,4 @@
-import WarmupNotation from "~/components/uimodels/WarmupComponent";
+import WarmupNotation from "~/components/WarmupComponent";
 
 export default function HomePage() {
   return (
