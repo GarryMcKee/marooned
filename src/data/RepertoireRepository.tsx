@@ -1,11 +1,16 @@
-export function getAcousticRepertoire(): string[] {
-  return ["A", "B", "C"];
+import acousticRepertoireData from "~/assets/repertoires/acousticRepertoire.json";
+import pianoRepertoireData from "~/assets/repertoires/pianoRepertoire.json";
+import type { RepertoirePiece } from "~/components/uimodels/RepertoirePiece";
+
+const acousticTracks: RepertoirePiece[] = acousticRepertoireData.tracks;
+const pianoTracks: RepertoirePiece[] = pianoRepertoireData.tracks;
+
+export function getAcousticRepertoire(): RepertoirePiece[] {
+  return acousticTracks;
 }
 
-export function getElectricRepertoire(): string[] {
-  return ["A", "B", "C"];
+export function getPianoRepertoire(): RepertoirePiece[] {
+  return pianoTracks;
 }
 
-export function getPianoRepertoire(): string[] {
-  return ["A", "B", "C"];
-}
+export class getElectricRepertoire {}
