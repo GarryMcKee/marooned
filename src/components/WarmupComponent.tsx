@@ -1,50 +1,24 @@
-"use client"; // <-- Add this line to mark the file as a client component
-
+"use client";
 import { useEffect } from "react";
-import { Vex } from "vexflow";
-import warmupsData from "~/assets/notationdata/warmups.json";
-import type {
-  GuitarNote,
-  GuitarNoteSequence,
-} from "~/components/uimodels/GuitarNote"; // Assuming this is the correct path
+import { TabNote, Vex } from "vexflow";
+import type { TabNoteJSON } from "~/data/WarmupRepository";
 
-const typedWarmupsData = warmupsData as GuitarNoteSequence;
+interface WarmupComponentProps {
+  warmupNotes: TabNoteJSON[];
+}
 
-export default function WarmupNotation() {
+export default function WarmupNotation({ warmupNotes }: WarmupComponentProps) {
   useEffect(() => {
-    const { Renderer, TabStave, TabNote, Formatter } = Vex.Flow;
-
+    const { Renderer, TabStave, Formatter } = Vex.Flow;
     const div = document.getElementById("warmupOutput") as HTMLDivElement;
-
     const renderer = new Renderer(div, Renderer.Backends.SVG);
     renderer.resize(500, 300);
     const context = renderer.getContext();
-
     const stave = new TabStave(10, 40, 400);
     stave.addClef("tab").setContext(context).draw();
 
-    // Function to get a random warmup (one of the inner arrays)
-    function getTodaysWarmup(): GuitarNote[] {
-      const randomIndex = Math.floor(
-        Math.random() * typedWarmupsData.warmups.length,
-      );
-      const warmup = typedWarmupsData.warmups[randomIndex];
-
-      // If undefined, return an empty array or a fallback warmup
-      return warmup ?? []; // This ensures it always returns a valid GuitarNote[] (either the warmup or an empty array)
-    }
-
-    // Map each warmup (array of GuitarNote objects) to TabNote objects
-    const notes = getTodaysWarmup().map((fretString) => {
-      return new TabNote({
-        positions: [{ str: fretString.guitarString, fret: fretString.fret }],
-        duration: "q",
-      });
-    });
-
-    // Format and draw the notes on the stave
-    Formatter.FormatAndDraw(context, stave, notes);
-  }, []); // Empty dependency array → runs only once on mount
+    Formatter.FormatAndDraw(context, stave, tabNoteJSONParser(warmupNotes));
+  }, [warmupNotes]);
 
   return (
     <div>
@@ -52,4 +26,13 @@ export default function WarmupNotation() {
       <div id="warmupOutput" className="notation" />
     </div>
   );
+}
+
+function tabNoteJSONParser(tabNotesJSON: TabNoteJSON[]): TabNote[] {
+  return tabNotesJSON.map((tabNoteJSON) => {
+    return new TabNote({
+      positions: tabNoteJSON.positions,
+      duration: tabNoteJSON.duration,
+    });
+  });
 }

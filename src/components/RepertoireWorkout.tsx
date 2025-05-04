@@ -1,4 +1,3 @@
-"use client";
 interface RepertoireWorkoutProps {
   repertoireTitle: string;
   pieces: string[];
